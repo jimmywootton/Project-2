@@ -145,7 +145,7 @@
   <body>
     <header>
       <h1>
-        <small>Assignment 4</small>
+        <small>Project 2</small>
         Persuasive or Deceptive Visualization?
       </h1>
 
@@ -161,16 +161,17 @@
         <h3>FOR the Proposition</h3>
 
         <figure>
-          <img src="for-2.jpg" alt="" style="max-width:100%;height:auto;display:block;"/>
-          <figcaption>Econonomy does play a role in environmental health</figcaption>
+          <img src="gdp-earnest.png" alt="A plot showing the CO2 emissions and GDP of the top 3 and bottom 3 countries in terms of GDP today, showing how the economy does play a role in carbon dioxide emissions" style="max-width:100%;height:auto;display:block;"/>
+          <figcaption>Econonomy does play a role in carbon dioxide emissions</figcaption>
         </figure>
 
         <p>Design Decisions and Rationale:</p>
 
         <ul>
-          <li>Top emitters were more of a warning color, using colors such as orange, yellow, and pink to show that this is in a sense the “danger area” for CO2. We tried avoiding red and green in consideration of the colorblind. <b>Score: -0.5</b></li>
-          <li>We originally wished to pick top and bottom countries in GDP, but that would appear as if the data was extremely cherry-picked. To combat this, we added more countries to the visualization.  <b>Score: 2</b></li>
-          <li>We decided to use a log transformation along the Y axis for both GDP and CO2 emissions. This was done to reflect the fact that the highest and lowest in both of these categories are several magnitudes apart from each other as well as the transformation in these figures through time. To plot a linear scale would make it hard to visualize the scale of GDP and CO2 for each country. <b>Score: 2</b></li>
+          <li>Originally, we intended to only show the top and bottom countries in gross GDP. However, we realized that this may seem like we are cherry picking the information, so we instead opted to show a larger picture with the top 3 and bottom 3 countries instead. This makes the visualization more credible and helps convey that the observed relationship isn't driven by a single outlier. <b>Score: 2</b></li>
+          <li>We chose to show the high producers with warm tones (orange, yellow, pink), and the lower producers with cool tones (blue, green, cyan). The colors help distinguish the income levels while intuitively mapping to perceptions of energy and wealth. <b>Score: -1</b></li>
+          <li>Because the differences between high and low-GDP countries were so extreme, the lower countries would have been nearly invisible on a linear scale, so we chose to plot differences on a logarithmic scale. While log scaling can sometimes make differences appear smaller than they are, our intent was to improve legibility rather than obscure variation. <b>Score: 0</b></li>
+          <li>For annotations, we used dotted lines for the arrows to help distinguish them from the main plot. This helps the viewer separate explanatory commentary from the data itself, enhancing readability without distorting the message, improving the visual guidance in an ethical, transparent way. <b>Score: 2</b></li>
         </ul>
       </section>
 
@@ -178,24 +179,26 @@
         <h3>AGAINST the Proposition</h3>
 
         <figure>
-          <img src="against-2.jpg" alt="" style="max-width:100%;height:auto;display:block;"/>
-          <figcaption>Economy does NOT play a role in environmental health</figcaption>
+          <img src="gdp-deceptive.png" alt="A plot showing the change in CO2 emissions and GDP of the top 3 and bottom 3 countries in terms of gross GDP today, showing that the economy does not play a role in carbon dioxide emissions." style="max-width:100%;height:auto;display:block;"/>
+          <figcaption>Economy does NOT play a role in carbon dioxide emissions</figcaption>
         </figure>
 
         <p>Design Decisions and Rationale:</p>
 
         <ul>
-          <li>We used different year ranges between the plots. The reason for this is it made the point clearer that there is no relation between GDP and CO2 emissions. <b>Score: -2</b></li>
-          <li>Both axes are actually on the same scale. This was done to make the point clearer and more concise. <b>Score: 2</b></li>
-          <li>We plotted the top 3 Countries (USA, Germany, Japan) and the bottom 3 Countries (Marshall Island, Tuvalu, Kiribati) in terms of gross GDP. We did this to show that this trend exists for countries across the whole range of GDPs. <b>Score: 2</b></li>
+          <li>For this graph, we debated whether we should truncate the data to start at 1990, after some of the lower GDP countries had an economic boom. We concluded that it would seem too cherry picked, as the data should still result in the same conclusion prior to an economic boom. We opted to plot the entire date range to show that our conclusion can be generalized to all time periods. <b>Score: 2</b></li>
+          <li>Rather than plotting direct values for the graphs, we transformed values to percentage change to compare growth patterns across differently scaled economies. The percent change emphasizes big overall changes rather than just changes in absolute values. The idea of plotting percent changes without a starting base value was quite deceptive however, as changes without taking into account relative values aren't always fully truthful.<b>Score: -2</b></li>
+          <li>We elongated the x-axis, which stretches out fluctuations to make the graph appear smoother. This subtle distortion strengthens the argument that economic growth and environmental impact are unrelated. The stretched design fits naturally within the stacked subplot layout (high-GDP nations on top, low-GDP nations on bottom), making the manipulation less detectable to casual viewers. <b>Score: -1.5</b></li>
+          <li>We used solid and dotted lines to differentiate CO2 and GDP, paired with color-coded distinctions between country groups. This redundant encoding enhances clarity and helps viewers instantly distinguish the variables. It increases readability without altering the underlying data, making it an ethically sound and effective design choice. <b>Score: 2</b></li>
         </ul>
       </section>
 
       <section>
         <h2>Final Reflection</h2>
 
-        <p>Creating both visualizations revealed how easily design and framing can influence interpretation even though we were working with the same data. The FOR visualization felt more straightforward and earnest, as the only deceptive design choice that we employed was the use of color country emissions. The AGAINST visualization, however, required more deliberate design choices (e.g., differing time ranges, selective focus) to make it appear visually compelling. This exercise made us aware of how small aesthetic or structural tweaks such as axis limits and colors can make a huge difference in how we perceive the visualizations. <br><br>
-          Ethical visualization now feels less about avoiding persuasion altogether and more about being transparent about what’s being emphasized. Visuals can both reveal and conceal patterns. We’ve learned that acceptable persuasion clarifies data insights, while misleading design manipulates perception without disclosure. If the viewer can reasonably reconstruct the underlying reality from your chart, your design is ethical. </p>
+        <p>Across both visualizations, the most straightforward part of the process was establishing our opposing propositions. Once we had this part covered, we had to brainstorm effective ways of displaying the information. Ultimately, we settled on using two line plots as we felt that visualizing changes in CO2 and GDP over time were more important than a singular plot showing the changes between CO2 and GDP as a direct graph between these two would be harder to draw conclusions from. Many techniques that we wanted to use to make the visualizations clearer or more engaging often risked distorting interpretation. For example, the use of log scales and axis stretching both improved legibility but also changed the way the viewer perceives magnitude and trend. It became clear that ethical visualization often involves navigating a fine line between accessibility and manipulation.</p>
+        <p>We were also surprised at how small changes could very easily influence the entire conclusion without technically falsifying any data. Choices like truncating years, switching the data to percent change, and even graph positioning could all produce very different impressions of the data. Throughout different iterations of the plots, it became clearer that the lines between an ethical plot and a deceptive one were blurred, as persuasive visualizes didn’t need to falsify data, completely valid features such as the color and framing could also be used to guide a viewer to a different conclusion while still appearing credible.</p>
+        <p>We now define the ethical boundary between visualization as less about avoiding persuasion altogether but rather more about the <b>intent and transparency</b> of the visual. Acceptable forms of persuasion will clarify data insights, while misleading visuals may omit or distort contexts to lead viewers to a conclusion that may not necessarily be there. If a feature is intentionally hiding or exaggerating something within the data, it crosses into the realm of deception.</p>
       </section>
     </main>
   <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"c822b88e119346678db149ed7b7721c9","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
